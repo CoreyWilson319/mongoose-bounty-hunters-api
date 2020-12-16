@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
+const cors = require('cors')
 
+app.use(cors({origin: '*'}))
 app.use(express.urlencoded())
 app.use(express.json())
+
 
 const models = require('./models')
 
